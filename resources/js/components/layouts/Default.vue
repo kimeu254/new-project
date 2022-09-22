@@ -18,16 +18,16 @@
                             <router-link :to="{name:'dashboard'}" class="nav-link">Home</router-link>
                         </li>
                         <li class="nav-item active text-center-lg">
-                            <router-link :to="{name:'dashboard'}" class="nav-link">Users</router-link>
+                            <router-link :to="{name:'users'}" class="nav-link">Users</router-link>
                         </li>
                         <li class="nav-item active text-center-lg">
                             <router-link :to="{name:'faculties'}" class="nav-link">Faculties</router-link>
                         </li>
                         <li class="nav-item active text-center-lg">
-                            <router-link :to="{name:'dashboard'}" class="nav-link">Courses</router-link>
+                            <router-link :to="{name:'courses'}" class="nav-link">Courses</router-link>
                         </li>
                         <li class="nav-item active text-center-lg">
-                            <router-link :to="{name:'dashboard'}" class="nav-link">Units</router-link>
+                            <router-link :to="{name:'units'}" class="nav-link">Units</router-link>
                         </li>
                     </ul>
                     <div class="d-flex">

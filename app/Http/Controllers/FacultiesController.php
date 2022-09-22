@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreFacultiesRequest;
-use App\Http\Requests\UpdateFacultiesRequest;
+use Illuminate\Http\Request;
 use App\Models\Faculties;
+use \Response;
 
 class FacultiesController extends Controller
 {
@@ -34,9 +34,11 @@ class FacultiesController extends Controller
      * @param  \App\Http\Requests\StoreFacultiesRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFacultiesRequest $request)
+    public function store(Request $request)
     {
-        //
+        $faculty = Faculties::create($request->all());
+
+        return Response::json($faculty);
     }
 
     /**
@@ -68,9 +70,11 @@ class FacultiesController extends Controller
      * @param  \App\Models\Faculties  $faculties
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFacultiesRequest $request, Faculties $faculties)
+    public function update(Request $request, $id)
     {
-        //
+        $faculty = Faculties::find($id);
+        $faculty->update($request->all());
+        return $faculty;
     }
 
     /**
@@ -79,8 +83,8 @@ class FacultiesController extends Controller
      * @param  \App\Models\Faculties  $faculties
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Faculties $faculties)
+    public function destroy($id)
     {
-        //
+        return Faculties::destroy($id);
     }
 }

@@ -13,7 +13,10 @@ const DahboardLayout = () => import('@/components/layouts/Default.vue')
 /* Authenticated Component */
 const Dashboard = () => import('@/components/Dashboard.vue')
 const Faculties = () => import('@/components/Faculties.vue')
-
+const Courses = () => import('@/components/Courses.vue')
+const Units = () => import('@/components/Units.vue')
+const Users = () => import('@/components/Users.vue')
+const editFaculty = () => import('@/components/cruds/edit/EditFaculty.vue')
 /* Authenticated Component */
 
 
@@ -52,13 +55,46 @@ const routes = [
                 }
             },
             {
+                name: "users",
+                path: '/users',
+                component: Users,
+                meta: {
+                    title: `Users`
+                }
+            },
+            {
                 name: "faculties",
                 path: '/faculties',
                 component: Faculties,
                 meta: {
                     title: `Faculties`
                 }
-            }
+            },
+            {
+                name: "editFaculty",
+                path: '/editFaculty/:id',
+                component: editFaculty,
+                params: true,
+                meta: {
+                    title: `editFaculty`
+                }
+            },
+            {
+                name: "courses",
+                path: '/courses',
+                component: Courses,
+                meta: {
+                    title: `Courses`
+                }
+            },
+            {
+                name: "units",
+                path: '/units',
+                component: Units,
+                meta: {
+                    title: `Units`
+                }
+            },
         ]
     }
 ]
