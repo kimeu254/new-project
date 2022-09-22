@@ -1,10 +1,15 @@
 <template>
     <div class="container">
       <h1>Faculties</h1>
-   <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+   <!-- <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    New Faculty
+   </button> -->
+   <router-link to="/createFaculty">
+    <button class="btn btn-outline-success">
     New Faculty
    </button>
-   <div class="modal" id="staticBackdrop"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+   </router-link>
+   <!-- <div class="modal" id="staticBackdrop"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -41,7 +46,7 @@
         </form>
       </div>
     </div>
-   </div>
+   </div> -->
    <table class="table table-hover table-bordered" id="example">
     <thead>
       <tr>

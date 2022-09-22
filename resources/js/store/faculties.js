@@ -1,5 +1,4 @@
 import axios from "axios";
-import router from "@/router";
 
 export default {
     state: {
@@ -45,8 +44,6 @@ export default {
             state.faculties = faculties
         },
         NEW_FACULTY(state, faculty) {
-            // let faculties = state.faculties.concat(faculty)
-            // state.faculties = faculties
             state.faculties = state.faculties.unshift(faculty)
         },
         DELETE_FACULTY(state, id) {

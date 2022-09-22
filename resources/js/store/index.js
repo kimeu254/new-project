@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 import auth from '@/store/auth'
 import faculties from '@/store/faculties'
+import courses from '@/store/courses'
 
 const store = createStore({
     plugins:[
@@ -9,7 +10,8 @@ const store = createStore({
     ],
     modules:{
         auth,
-        faculties
+        faculties,
+        courses,
     }
 })
 

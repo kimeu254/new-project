@@ -18,6 +18,7 @@ const Units = () => import('@/components/Units.vue')
 const Users = () => import('@/components/Users.vue')
 const editFaculty = () => import('@/components/cruds/edit/EditFaculty.vue')
 const createFaculty = () => import('@/components/cruds/create/CreateFaculty.vue')
+const createCourse = () => import('@/components/cruds/create/CreateCourse.vue')
 /* Authenticated Component */
 
 
@@ -94,6 +95,14 @@ const routes = [
                 component: Courses,
                 meta: {
                     title: `Courses`
+                }
+            },
+            {
+                name: "createCourse",
+                path: '/createCourse',
+                component: createCourse,
+                meta: {
+                    title: `createCourse`
                 }
             },
             {
