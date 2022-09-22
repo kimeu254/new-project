@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UnitsController;
 use App\Http\Controllers\FacultiesController;
 use App\Http\Controllers\CoursesController;
 use Illuminate\Http\Request;
@@ -29,3 +30,8 @@ Route::get('/courses', [CoursesController::class, 'index']);
 Route::post('/course', [CoursesController::class, 'store']);
 Route::put('/course/{id}',[CoursesController::class,'update']);
 Route::delete('/course/{id}',[CoursesController::class,'destroy']);
+
+Route::get('/units', [UnitsController::class, 'index']);
+Route::post('/unit', [UnitsController::class, 'store']);
+Route::put('/unit/{id}',[UnitsController::class,'update']);
+Route::delete('/unit/{id}',[UnitsController::class,'destroy']);

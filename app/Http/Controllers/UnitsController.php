@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreUnitsRequest;
-use App\Http\Requests\UpdateUnitsRequest;
+use Illuminate\Http\Request;
+use \Response;
 use App\Models\Units;
 
 class UnitsController extends Controller
@@ -15,7 +15,7 @@ class UnitsController extends Controller
      */
     public function index()
     {
-        //
+        return Units::all();
     }
 
     /**
@@ -34,9 +34,10 @@ class UnitsController extends Controller
      * @param  \App\Http\Requests\StoreUnitsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUnitsRequest $request)
+    public function store(Request $request)
     {
-        //
+        $unit = Units::create($request->all());
+        return Response::json($unit);   
     }
 
     /**
@@ -56,7 +57,7 @@ class UnitsController extends Controller
      * @param  \App\Models\Units  $units
      * @return \Illuminate\Http\Response
      */
-    public function edit(Units $units)
+    public function edit(Request $request)
     {
         //
     }
@@ -68,9 +69,11 @@ class UnitsController extends Controller
      * @param  \App\Models\Units  $units
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUnitsRequest $request, Units $units)
+    public function update(Request $request, $id)
     {
-        //
+        $unit = Units::find($id);
+        $unit->update($request->all());
+        return $unit;
     }
 
     /**
@@ -79,8 +82,8 @@ class UnitsController extends Controller
      * @param  \App\Models\Units  $units
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Units $units)
+    public function destroy($id)
     {
-        //
+        return Courses::destroy($id);
     }
 }
