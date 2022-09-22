@@ -84,6 +84,6 @@ class UnitsController extends Controller
      */
     public function destroy($id)
     {
-        return Courses::destroy($id);
+        return Units::destroy($id);
     }
 }
