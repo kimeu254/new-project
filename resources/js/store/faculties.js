@@ -27,7 +27,7 @@ export default {
                 commit('DELETE_FACULTY', id)
             })
         },
-        async updateFaculty({commit}, faculty){
+        async updateFaculty({commit}, id, faculty){
             // return axios.put('/api/faculty/'+id).then(res =>{
             //     commit('EDIT_FACULTY', id)
             // })  
@@ -58,7 +58,7 @@ export default {
             const index = state.faculties.findIndex(f => f.id === faculty.id)
 
             if(index !== -1) {
-                state.todos.splice(index, 1, faculty)
+                state.faculties.splice(index, 1, faculty)
             }
         }
     },

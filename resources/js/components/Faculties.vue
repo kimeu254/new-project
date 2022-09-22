@@ -59,10 +59,10 @@
         <td>
           <div class="d-flex flex-row" style="justify-content: space-between;" >
             <div>
-              <!-- <button data-bs-toggle="modal" :data-bs-target="'#staticBackdrop' + faculty.id" type="button" class="btn btn-outline-info"><i class="bi bi-pencil"></i>Edit</button> -->
-              <router-link :to="{name: 'editFaculty', params: {id: faculty.id}}">
+              <button data-bs-toggle="modal" :data-bs-target="'#staticBackdrop' + faculty.id" type="button" class="btn btn-outline-info"><i class="bi bi-pencil"></i>Edit</button>
+              <!-- <router-link :to="{name: 'editFaculty', params: {id: faculty.id}}">
                 <button type="button" class="btn btn-outline-info"><i class="bi bi-pencil"></i>Edit</button>
-              </router-link>
+              </router-link> -->
 
           </div>
           <div>
@@ -70,7 +70,7 @@
           </div>
           </div>
         </td>
-        <!-- <div class="modal" :id="'staticBackdrop' + faculty.id"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal" :id="'staticBackdrop' + faculty.id"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
@@ -107,7 +107,7 @@
               </form>
             </div>
           </div>
-        </div> -->
+        </div>
       </tr>
   
     </tbody>

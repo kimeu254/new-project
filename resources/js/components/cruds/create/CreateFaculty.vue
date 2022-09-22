@@ -1,5 +1,5 @@
 <template>
-    <div class="vh-100" >
+    <!-- <div class="vh-100" >
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col col-xl-10">
@@ -15,13 +15,11 @@
                         <form action="javascript:void(0)" @submit="register" class="row" method="post">
 
                         <div class="d-flex align-items-center mb-3 pb-1">
-                            <h1 class="h1 fw-bold mb-0">
-                                <span class="text-success">Past</span>
-                                <span class="text-warning">Papers</span>
-                            </h1>
+                            <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                            <span class="h1 fw-bold mb-0">Logo</span>
                         </div>
 
-                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Create an account</h5>
+                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
                         <div class="col-12" v-if="Object.keys(validationErrors).length > 0">
                                 <div class="alert alert-danger">
@@ -47,18 +45,19 @@
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="password" name="password_confirmation" v-model="user.password_confirmation" id="password_confirmation" placeholder="Enter Password" class="form-control form-control-lg">
+                            <input type="password_confirmation" name="password_confirmation" v-model="user.password_confirmation" id="password_confirmation" placeholder="Enter Password" class="form-control form-control-lg">
                             <label class="form-label" for="form2Example27">Password Confirm</label>
                         </div>
 
                         <div class="pt-1 mb-4">
-                            <button type="submit" :disabled="processing" class="btn btn-success btn-lg btn-block">
-                                {{ processing ? "Please wait..." : "Register" }}
+                            <button type="submit" :disabled="processing" class="btn btn-primary btn-lg btn-block">
+                                {{ processing ? "Please wait" : "Register" }}
                             </button>
                         </div>
 
-                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Already have an account? <router-link :to="{name:'login'}" class="text-success">Login Now!</router-link></p>
-                        
+                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Already have an account? <router-link :to="{name:'login'}">Login Now!</router-link></p>
+                        <a href="#!" class="small text-muted">Terms of use.</a>
+                        <a href="#!" class="small text-muted">Privacy policy</a>
                         </form>
 
                     </div>
@@ -68,46 +67,21 @@
             </div>
         </div>
         </div>
-    </div>
+    </div> -->
 </template>
-
 <script>
-import { mapActions } from 'vuex'
-export default {
-    name:'register',
-    data(){
-        return {
-            user:{
-                name:"",
-                email:"",
-                password:"",
-                password_confirmation:""
+export default{
+    name:"createFaculty",
+    data() {
+        return{
+            faculty: {
+                name: '',
+                status: '',
             },
             validationErrors:{},
             processing:false
         }
     },
-    methods:{
-        ...mapActions({
-            signIn:'auth/login'
-        }),
-        async register(){
-            this.processing = true
-            await axios.get('/sanctum/csrf-cookie')
-            await axios.post('/register',this.user).then(response=>{
-                this.validationErrors = {}
-                this.signIn()
-            }).catch(({response})=>{
-                if(response.status===422){
-                    this.validationErrors = response.data.errors
-                }else{
-                    this.validationErrors = {}
-                    alert(response.data.message)
-                }
-            }).finally(()=>{
-                this.processing = false
-            })
-        }
-    }
+    methods: {},
 }
 </script>

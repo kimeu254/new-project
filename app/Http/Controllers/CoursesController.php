@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCoursesRequest;
-use App\Http\Requests\UpdateCoursesRequest;
 use App\Models\Courses;
+use Illuminate\Http\Request;
+use \Response;
+use Yajra\Datatables\Datatables;
+use DB;
 
 class CoursesController extends Controller
 {
@@ -15,7 +17,8 @@ class CoursesController extends Controller
      */
     public function index()
     {
-        //
+        //return Courses::all();
+       
     }
 
     /**
@@ -23,7 +26,7 @@ class CoursesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
     }
@@ -34,9 +37,9 @@ class CoursesController extends Controller
      * @param  \App\Http\Requests\StoreCoursesRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCoursesRequest $request)
+    public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -45,7 +48,7 @@ class CoursesController extends Controller
      * @param  \App\Models\Courses  $courses
      * @return \Illuminate\Http\Response
      */
-    public function show(Courses $courses)
+    public function show(Request $request)
     {
         //
     }
@@ -56,7 +59,7 @@ class CoursesController extends Controller
      * @param  \App\Models\Courses  $courses
      * @return \Illuminate\Http\Response
      */
-    public function edit(Courses $courses)
+    public function edit(Request $request)
     {
         //
     }
@@ -68,7 +71,7 @@ class CoursesController extends Controller
      * @param  \App\Models\Courses  $courses
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCoursesRequest $request, Courses $courses)
+    public function update(Request $request)
     {
         //
     }
@@ -79,7 +82,7 @@ class CoursesController extends Controller
      * @param  \App\Models\Courses  $courses
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Courses $courses)
+    public function destroy(Request $request)
     {
         //
     }
