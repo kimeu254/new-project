@@ -1,9 +1,11 @@
 <template>
     <div class="container">
       <h1>Users</h1>
-      <button class="btn btn-outline-success">
+      <router-link to="/createUser">
+        <button class="btn btn-outline-success">
         New User
       </button>
+      </router-link>
       <table class="table table-hover table-bordered" id="example">
         <thead>
           <tr>

@@ -32,8 +32,13 @@
                             </div>
 
                         <div class="form-outline mb-4">
-                            <input type="text" v-model="user.name" name="name" id="email" class="form-control form-control-lg">
-                            <label class="form-label" for="form2Example17">Name</label>
+                            <input type="text" v-model="user.first_name" name="name" id="email" class="form-control form-control-lg">
+                            <label class="form-label" for="form2Example17">First Name</label>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <input type="text" v-model="user.last_name" name="name" id="email" class="form-control form-control-lg">
+                            <label class="form-label" for="form2Example17">Last Name</label>
                         </div>
 
                         <div class="form-outline mb-4">
@@ -78,7 +83,8 @@ export default {
     data(){
         return {
             user:{
-                name:"",
+                first_name:"",
+                last_name:"",
                 email:"",
                 password:"",
                 password_confirmation:""

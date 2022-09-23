@@ -1,52 +1,13 @@
 <template>
     <div class="container">
       <h1>Faculties</h1>
-   <!-- <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    New Faculty
-   </button> -->
+  
    <router-link to="/createFaculty">
     <button class="btn btn-outline-success">
     New Faculty
    </button>
    </router-link>
-   <!-- <div class="modal" id="staticBackdrop"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">New Faculty</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form action="" @submit.prevent="onSubmit">
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-12 form-group">
-                <label for="title" class="col-form-label col-form-label-lg">
-                  Name 
-                  <span class="text-danger">*</span>
-                </label>
-                <input type="name" class="form-control" v-model.trim="faculty.name" required=""/>
-              </div>
-              <div class="col-12 form-group">
-                <label for="title" class="col-form-label col-form-label-lg">
-                  Status 
-                  <span class="text-danger">*</span>
-                </label>
-                <select class="form-select" aria-label="Default select example" v-model.trim="faculty.status">
-                  <option selected></option>
-                  <option value="Active">Active</option>
-                  <option value="Inactive">Inactive</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-primary">Save Changes</button>
-          </div>
-        </form>
-      </div>
-    </div>
-   </div> -->
+
    <table class="table table-hover table-bordered" id="example">
     <thead>
       <tr>
